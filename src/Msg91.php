@@ -2,12 +2,6 @@
 
 namespace lucky541\Msg91;
 
-use Msg91\Api\OTP;
-use Msg91\Api\Phonebook;
-use Msg91\Api\Reseller;
-use Msg91\Api\TextSMS;
-use Msg91\Api\VirtualNumber;
-
 class Msg91
 {
     private $authKey, $otp, $textSMS, $reseller, $phonebook, $virtualNumber;
@@ -18,11 +12,11 @@ class Msg91
     {
         $this->authKey = $authKey; // user's authkey
 
-        $this->otp = new OTP(BASE_URL);                             // object for otp services
-        $this->textSMS = new TextSMS(BASE_URL);                    // object for otp services
-        $this->phonebook = new Phonebook(BASE_URL);               // object for phonebook services
-        $this->reseller = new Reseller(BASE_URL);                // object for reseller services
-        $this->virtualNumber = new VirtualNumber(BASE_URL);     // object for virtual number services
+        $this->otp = new OTP(Config::MSG91_API_URL);                             // object for otp services
+        $this->textSMS = new TextSMS(Config::MSG91_API_URL);                    // object for otp services
+        $this->phonebook = new Phonebook(Config::MSG91_API_URL);               // object for phonebook services
+        $this->reseller = new Reseller(Config::MSG91_API_URL);                // object for reseller services
+        $this->virtualNumber = new VirtualNumber(Config::MSG91_API_URL);     // object for virtual number services
     }
 
     /********************************************** FOR OTP API'S **********************************************/
