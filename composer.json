@@ -1,0 +1,24 @@
+{
+    "name": "lucky/msg91",
+    "description": "Msg91 PHP api library.",
+    "keywords": ["msg91", "msg", "walkover"],
+    "license": "walkover.in",
+    "authors": [
+        {
+            "name": "Lucky Barkane",
+            "email": "lucky@msg91.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.3"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "lucky541\\Msg91\\": "src/"
+        }
+    }
+}
