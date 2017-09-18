@@ -13,12 +13,9 @@
     "require": {
 		"php": ">=5.3"
     },
-	"require-dev": {
-		"phpunit/phpunit": "5.2.*"
-    },
 	"autoload": {
         "psr-4": {
-            "lucky541\\Msg91\\": "src/"
+            "lucky\\Msg91\\": "src/"
         }
     }
 }

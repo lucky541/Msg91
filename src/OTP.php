@@ -1,5 +1,5 @@
 <?php
-namespace lucky541\Msg91;
+namespace lucky\Msg91;
 
 
 /**

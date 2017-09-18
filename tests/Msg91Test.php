@@ -18,7 +18,7 @@ class Msg91Test extends PHPUnit_Framework_TestCase{
   *
   */
   public function testIsThereAnySyntaxError(){
-	$var = new \lucky541\Msg91\Msg91("myAuthKey");
+	$var = new \lucky\Msg91\Msg91("myAuthKey");
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
@@ -31,7 +31,7 @@ class Msg91Test extends PHPUnit_Framework_TestCase{
   *
   */
   public function testMethod1(){
-	$var = new \lucky541\Msg91\Msg91("myAuthKey");
+	$var = new \lucky\Msg91\Msg91("myAuthKey");
 	$this->assertTrue($var->method1("hey") == 'Hello World');
 	unset($var);
   }
