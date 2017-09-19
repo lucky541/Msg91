@@ -44,7 +44,7 @@ Msg91 PHP API Doc.
                     "sender" => $sender,
                     "route" => $route,
                     "country" => $country,
-                    );
+                 );
 
     $output = $msg91->sendSMS($data);
 ```
@@ -59,10 +59,10 @@ Msg91 PHP API Doc.
     $message = "Your verification code is ##OTP##."; 
 	
     $data = array( "authkey" => AUTH_KEY,
-		            "mobile" => $mobile,
-		            "message" => $message,
-		            "sender" => $sender,
-	              );
+		   "mobile" => $mobile,
+		   "message" => $message,
+		   "sender" => $sender,
+	         );
 	              
     $output = $msg91->otp->sendOTP($data);
 ```
@@ -82,13 +82,13 @@ Msg91 PHP API Doc.
 	$data = array( "authkey" => AUTH_KEY,
 	               "user_full_name" => $user_company_name,  
 	               "user_name"=> $user_name,           
-	                "user_mobile_number" =>$user_mobile_number,
-	                "user_email" => $user_email,       
-	                "user_company_name"=>$user_company_name,  
-	                 "user_industry"=> $user_industry,    
-	                "user_expiry" => $user_expiry,      
-	                "user_country_code" => $user_country_code,
-	              );
+	               "user_mobile_number" =>$user_mobile_number,
+	               "user_email" => $user_email,       
+	               "user_company_name"=>$user_company_name,  
+	               "user_industry"=> $user_industry,    
+	               "user_expiry" => $user_expiry,      
+	               "user_country_code" => $user_country_code,
+	             );
 
 	$output = $msg91->sendOTP($data);
 ```
@@ -109,10 +109,10 @@ Msg91 PHP API Doc.
     $group = "group ID"; // group ID
  
      $data = array( "authkey" => AUTH_KEY,
-	                "name" => $name,
-	                "mob_no" => $mob_no,
-	                "group" => $group,
-                    );
+	            "name" => $name,
+	            "mob_no" => $mob_no,
+	            "group" => $group,
+                  );
 
     $output = $msg91->addClient($data);
   ```
@@ -121,8 +121,8 @@ Msg91 PHP API Doc.
 ```php
     $contact_id="contact id";  //contact id
     $data = array( "authkey" => AUTH_KEY,
-		           "contact_id" => $contact_id,
-		          );
+		   "contact_id" => $contact_id,
+		 );
 		
 	$output = $msg91->deleteContact($data);
    ```
