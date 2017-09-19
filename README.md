@@ -21,9 +21,10 @@ Msg91 PHP API Doc.
 
 ### How to use 
 - Now you need to create an Object of Msg91's
-> For creating an $object of Msg91 you need to pass your Msg91's AuthKey. Thats all you are ready to explore all the functionalities that Msg91 offers.
+> For creating an object of Msg91 you need to pass your Msg91's AuthKey. Thats all you are ready to explore all the functionalities that Msg91 offers.
 ```
-  $msg91 = new \lucky\Msg91\Msg91('Msg91-User-Authkey');
+ // create an object of msg91
+ $msg91 = new \lucky\Msg91\Msg91('Msg91-User-Authkey');
 ```
 
 > Note: Only few basic operations are only shown
@@ -31,9 +32,9 @@ Msg91 PHP API Doc.
 #### Send Text SMS
 - An example to send text sms using Msg91's Object.
 ```php
-    $mobiles = "919999999999"; // mobile no. to whom you want to send sms
+    $mobiles = "919999999999"; // mobile no. to whom you want to send sms. Including country code.
     $message = " your text sms will come up here"; // Message content to send
-    $sender = "my sender id"; // Receiver will see this as sender's ID.
+    $sender = "MSGIND"; // Receiver will see this as sender's ID.
     $route = "1"; // Route you want to use. 1 for promotional route and 4 for transactional route 
     $country = "Country_code"; //numeric	0 for international,1 for USA, 91 for India.
 
@@ -55,7 +56,7 @@ Msg91 PHP API Doc.
     $sender = "OTPSMS";   // Receiver will see this as sender's ID. (default : OTPSMS)
 	
     // Message content to send. (default : Your verification code is ##OTP##.)
-	$message = "Your verification code is ##OTP##."; 
+    $message = "Your verification code is ##OTP##."; 
 	
     $data = array( "authkey" => AUTH_KEY,
 		            "mobile" => $mobile,
@@ -69,7 +70,7 @@ Msg91 PHP API Doc.
 
 - #### Add Client
 ```php
-    $user_full_name     =   "fname lname";     //(varchar)	Full name of user
+    	$user_full_name     =   "fname lname";     //(varchar)	Full name of user
 	$user_name          =   "user_name";   //(varchar) User's name
 	$user_mobile_number =   "user_mobile_number";        //(int) User's mobile
 	$user_email         =   "user_email";   //(varchar) User's email
